@@ -1,0 +1,40 @@
+footer{
+    background-color: var(--neutral-100);
+
+    img{
+        width: 100px;
+        margin-bottom: 15px;
+    }
+
+    ul{
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        li{
+            a{
+                text-decoration: none;
+                color: var(--neutral-900);
+
+                &:hover{
+                    color: var(--neutral-700);
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .footer-code{
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        background-color: var(--neutral-900);
+        font-size: 0.7rem;
+        p{
+            margin: 0px;
+            color: var(--neutral-100);
+        }
+    }
+}

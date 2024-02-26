@@ -1,0 +1,17 @@
+.accordion{
+    .accordion-header{
+        display: flex;
+        gap: 10px;
+
+        i{
+            padding: 10px;
+            background: var(--neutral-300);
+            border-radius: var(--radius);
+            transition: var(--transition-025);
+
+            &:hover{
+                background: var(--neutral-500);
+            }
+        }
+    }
+}
