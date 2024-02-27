@@ -16,6 +16,7 @@
         background-color: var(--secondary-500);
         width: 300px;
         height: 300px;
+        z-index: -1;
     }
     &#blob-3{
         background-color: var(--primary-700);
