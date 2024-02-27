@@ -6,9 +6,10 @@ interface CardProps {
   backgroundColor?: string;
   id?: string;
   children?: ReactNode;
+  href?: string;
 }
 
-const Card: React.FC<CardProps> = ({ backgroundImage, backgroundColor, id, children }) => {
+const Card: React.FC<CardProps> = ({ backgroundImage, backgroundColor, id, children, href }) => {
   const { ref, inView } = useInView({
     threshold: 0,
   });
@@ -18,9 +19,15 @@ const Card: React.FC<CardProps> = ({ backgroundImage, backgroundColor, id, child
   const backgroundImageStyle = backgroundImage ? { backgroundImage: `url('${backgroundImage}')` } : {};
 
   return (
-    <div id={customId} ref={ref} className={`card ${bgColor} ${inView ? 'visible' : 'not-visible'}`} style={{ ...backgroundImageStyle }}>
+    <>
+    {href? (
+    <a href={href} target='_blank' id={customId} ref={ref} className={`card ${bgColor} ${inView ? 'visible' : 'not-visible'}`} style={{ ...backgroundImageStyle }}>
       {children}
-    </div>
+    </a>):
+    (<div id={customId} ref={ref} className={`card ${bgColor} ${inView ? 'visible' : 'not-visible'}`} style={{ ...backgroundImageStyle }}>
+      {children}
+    </div>)}
+    </>
   );
 };
 

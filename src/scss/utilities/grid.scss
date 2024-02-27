@@ -329,15 +329,14 @@ html {
 .grid{
     &#custom-grid{
         grid-template:
-        "id1 id2 id5"
-        "id3 id4 id5";
+        "id1 id2 id3"
+        "id1 id4 id4";
         
 
         @media (max-width: 1200px){
             grid-template:
             'id1 id2'
-            'id3 id4'
-            'id5 id5';
+            'id3 id4';
         }
 
         @media (max-width: 768px){
@@ -345,8 +344,7 @@ html {
             'id1'
             'id2'
             'id3'
-            'id4'
-            'id5';
+            'id4';
         }
 
         .card{
@@ -385,41 +383,6 @@ html {
         }
     }
 }
-
-.in-progress{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-direction: column;
-
-    p{
-        font-size: 2rem;
-    }
-}
-
-#trusted-us{
-
-    .grid{
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        .card{
-            width: 200px;
-        }
-        img{
-            filter: saturate(0) brightness(0) opacity(0.3);
-            max-height: 100px;
-            object-fit: contain;
-        }
-    }
-
-}
-
   .visible {
     opacity: 1;
     transform: translateY(0);

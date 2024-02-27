@@ -1,0 +1,36 @@
+.blob{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(255, 0, 166, 0.468);
+    border-radius: 100%;
+    filter: blur(100px);
+    display: block;
+
+    &#blob-1{
+        background-color: var(--primary-700);
+        left: 0px;
+        bottom: 0px;
+    }
+    &#blob-2{
+        background-color: var(--secondary-500);
+        width: 300px;
+        height: 300px;
+    }
+    &#blob-3{
+        background-color: var(--primary-700);
+        right: 0;
+        width: 300px;
+        height: 300px;
+    }
+    &#blob-4{
+        background-color: var(--primary-500);
+        right: 20%;
+        z-index: 1;
+    }
+    &#blob-5{
+        background-color: var(--secondary-700);
+        right: 0px;
+        bottom: -300px;
+    }
+}

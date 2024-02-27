@@ -1,248 +1,42 @@
-a:has(>.card){
-    text-decoration: none;
-    color: inherit;
-}
 .card{
-    padding: 30px;
-    border-radius: var(--radius);
+    border-radius: 15px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    overflow: hidden;
+    justify-content: flex-end;
+    z-index: 10;
+    transform: 0.25s;
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out;
 
-    &.bg-transparent{
-        padding: 0px;
-    }
-    &.bg-neutral-100{
-        .rich-text{
-            color: var(--neutral-900);
-        }
-    }
-    
-    @media (max-width: 768px){
-        .box-3{
-            height: 100px;
-            display: flex;
-        }
-        .speed-icons{
-            height: 200px;
-            display: flex;
-        }
-        .mobile-design{
-            height: 300px;
-            display: flex;
-        }
-    }
-
-    .box-3{
-        display: flex;
-        gap: 30px;
+    &.visible {
         opacity: 1;
-        justify-content: space-evenly;
+        transform: translateY(0);
+        transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out;
+      }
 
+      &.not-visible {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
 
-        img{
-            opacity: 1;
-            max-width: 30%;
-
-            object-fit: contain;
-            &:nth-child(1){
-                animation: 1s showup;
-            }
-            &:nth-child(2){
-                animation: 1s showup;
-            }
-            &:nth-child(3){
-                animation: 1s showup;
-            }
-        }
+    .overlay{
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        position: absolute;
     }
 
-    .speed-icons{
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        gap: 30px;
-        opacity: 1;
-
-        span{
-            width: 30px;
-            height: 30px;
-            background-color: var(--neutral-300);
-            display: block;
-            border-radius: 100%;
-            padding: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 5px solid var(--secondary-500);
-            color: var(--secondary-500);
-            font-weight: bold;
-
-            &:nth-child(1){
-                transform: translateY(-2px);
-                animation: 1s showup;
-             }
-
-            &:nth-child(2){
-                transform: scale(0.7) translatey(20px);
-                animation: 1s showup;
-                filter: blur(1px);
-             }
-
-            &:nth-child(3){
-                transform: scale(1.4) translatey(50px);
-                animation: 1s showup;
-             }
-
-            &:nth-child(4){
-                animation: 1s showup;
-            }
-
-            &:nth-child(5){
-                transform: translatey(20px) scale(2);
-                animation: 1s showup;
-             }
-             &:nth-child(6){
-                transform: translate(20px, 10px);
-                filter: blur(2px);
-                animation: 1s showup;
-             }
-        }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
     }
 
-    .mobile-design{
-        display: flex;
-        justify-content: center;
-
-        img{
-           max-width: 200px;
-            border-radius: var(--radius);
-            box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
-
-            &:nth-child(1){
-                animation: 1s showup;
-                transform: translate(40px, -10px) scale(0.7);
-                filter: blur(1px);
-            }
-            &:nth-child(2){
-                animation: 1s showup;
-                z-index: 1;
-            }
-            &:nth-child(3){
-                animation: 1s showup;
-                transform: translate(-50px, 40px) scale(0.7);
-                filter: blur(1px);
-            }
-        }
+    .rich-text{
+        padding: 30px;
+        z-index: 10;
     }
-    .star-icons{
-        display: flex;
-        gap: 10px;
-        flex-direction: row;
-
-        i{
-            color: var(--secondary-500);
-            font-size: 2rem;
-
-            &:nth-child(1){
-                animation: 1s showup;
-            }
-            &:nth-child(2){
-                animation: 1s showup;
-            }
-            &:nth-child(3){
-                animation: 1s showup;
-            }
-            &:nth-child(4){
-                animation: 1s showup;
-            }
-            &:nth-child(5){
-                animation: 1s showup;
-            }
-
-        }
-    }
-
-    &#get-in-touch{
-        form{
-            padding: 50px;
-            display: flex;
-            gap: 30px;
-            flex-direction: column;
-
-            @media (max-width: 768px){
-                padding: 0px;
-                padding-top: 20px;
-            }
-
-            .form-inputs{
-                display: flex;
-                gap: 40px;
-
-                @media (max-width: 768px){
-                    flex-direction: column;
-                }
-
-                .label{
-                    position: relative;
-                    border-bottom: 1px solid black;
-
-                    @media (max-width: 768px){
-                        width: 100%;
-                    }
-
-                    &:has(.message){
-                        width: 100%;
-                        input,textarea{
-                            width: 100%;
-                            height: 45px;
-                        }
-                    }
-
-                    span{
-                        position: absolute;
-                        pointer-events: none;
-                        left: 15px;
-                        top: 10px;
-                        transition: var(--transition-025);
-                    }
-                    input, textarea{
-                        padding: 15px;
-                        border-radius: var(--radius);
-                        border: none;
-                        outline: none;
-                        background-color: var(--neutral-100);
-                        resize: none;
-
-                        @media (max-width: 768px){
-                            width: 100%;
-                        }
-
-                        &:focus{
-                            border: none;
-                            outline: none;
-                        }
-
-                        &:focus ~ span, &.not-empty ~ span {
-                            top: -25px;
-                            font-size: 0.8rem;
-                        }           
-                    }
-                }
-            }
-
-            .primary-btn{
-                margin-right: 0px;
-                cursor: pointer;
-                border: none;
-                font-size: 1rem;
-            }
-        }
 }
-        
-}
-
-@keyframes showup {
-    from {transform: translatey(100px); opacity: 0}
-  }
