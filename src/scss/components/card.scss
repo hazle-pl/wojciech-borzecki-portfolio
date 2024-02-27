@@ -7,6 +7,14 @@
     z-index: 10;
     transform: 0.25s;
     position: relative;
+    min-height: 200px;
+    transition: 0.25s;
+    color: var(--neutral-100);
+
+    &:hover{
+        transform: scale(1.01);
+    }
+         
 
     .overlay{
         width: 100%;

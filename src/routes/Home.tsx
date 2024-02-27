@@ -56,6 +56,30 @@ const Home = () => {
               <h2>Github</h2>
             </RichText>
           </Card>
+          <Card id="id6" href="#soon">
+            <img src="https://lh4.googleusercontent.com/proxy/EWm9FVpPqF7N5rcraSRF-UMDuwBzfkA2tYNH73WwfdaqqrhD7V-TQL22-XP7fOgbjSp4X836b8_TVTYw1JN7bSJuUHbgtMURdiA2n-lyFKYnnpRzFzCJ72kCEw"/>
+            <span className="overlay"/>
+            <RichText>
+              <h4>App</h4>
+              <h2>Soon</h2>
+            </RichText>
+          </Card>
+          <Card id="id7" href="#soon">
+            <img src="https://lh4.googleusercontent.com/proxy/EWm9FVpPqF7N5rcraSRF-UMDuwBzfkA2tYNH73WwfdaqqrhD7V-TQL22-XP7fOgbjSp4X836b8_TVTYw1JN7bSJuUHbgtMURdiA2n-lyFKYnnpRzFzCJ72kCEw"/>
+            <span className="overlay"/>
+            <RichText>
+              <h4>App</h4>
+              <h2>Soon</h2>
+            </RichText>
+          </Card>
+          <Card id="id68" href="#soon">
+            <img src="https://lh4.googleusercontent.com/proxy/EWm9FVpPqF7N5rcraSRF-UMDuwBzfkA2tYNH73WwfdaqqrhD7V-TQL22-XP7fOgbjSp4X836b8_TVTYw1JN7bSJuUHbgtMURdiA2n-lyFKYnnpRzFzCJ72kCEw"/>
+            <span className="overlay"/>
+            <RichText>
+              <h4>App</h4>
+              <h2>Soon</h2>
+            </RichText>
+          </Card>
         </Grid>
       </ContentContainer>
     </Section>

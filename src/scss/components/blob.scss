@@ -6,6 +6,8 @@
     border-radius: 100%;
     filter: blur(100px);
     display: block;
+    opacity: 0.4;
+    display: non;
 
     &#blob-1{
         background-color: var(--primary-700);
@@ -17,17 +19,7 @@
             max-height: 100%;
          }
     }
-    &#blob-2{
-        background-color: var(--secondary-500);
-        width: 300px;
-        height: 300px;
-        z-index: -1;
 
-        @media (max-width: 768px) {
-           max-width: 100%;
-           max-height: 100%;
-        }
-    }
     &#blob-3{
         background-color: var(--primary-700);
         right: 0;
@@ -52,7 +44,9 @@
     &#blob-5{
         background-color: var(--secondary-700);
         right: 0px;
-        bottom: -300px;
+        width: 100px;
+        height: 100px;
+        opacity: 1;
 
         @media (max-width: 768px) {
             max-width: 100%;
