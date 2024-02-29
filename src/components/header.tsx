@@ -67,10 +67,10 @@ const Header = () => {
       </div>
       <div className={`menu ${isNavOpen ? 'open' : ''}`}>
         <ul>
-          <li><a onClick={() => setIsNavOpen(!isNavOpen)} target="_blank" href="https://www.instagram.com/hazle.pl/">Linkedin</a></li>
-          <li><a onClick={() => setIsNavOpen(!isNavOpen)} target="_blank" href="https://facebook.com/hazle.studio">Github</a></li>
-          <li><a onClick={() => setIsNavOpen(!isNavOpen)} href={`mailto:kontakt@hazle.pl`}>Polish CV</a></li>
-          <li><a onClick={() => setIsNavOpen(!isNavOpen)} href={`mailto:kontakt@hazle.pl`}>English CV</a></li>
+          <li><a onClick={() => setIsNavOpen(!isNavOpen)} target="_blank" href="https://www.linkedin.com/in/wojciech-borz%C4%99cki-a22a4727a/">Linkedin</a></li>
+          <li><a onClick={() => setIsNavOpen(!isNavOpen)} target="_blank" href="https://github.com/hazle-pl?tab=repositories">Github</a></li>
+          <li><a onClick={() => setIsNavOpen(!isNavOpen)} target="_blank" href={`/pdf/cv-pl.pdf`}>Polish CV</a></li>
+          <li><a onClick={() => setIsNavOpen(!isNavOpen)} target="_blank" href={`/pdf/cv-en.pdf`}>English CV</a></li>
         </ul>
       </div>
     </header>
