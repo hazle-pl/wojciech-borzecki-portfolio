@@ -51,7 +51,7 @@ const Home = () => {
         <Grid paddingBottom="3" gap={3} paddingTop="3" xl={2} md={2} xs={1}>
         <img className="grid-images" src="../img/design-image.webp"/>
           <RichText>
-            <p>In addition to my proficiency in web development, I also have a keen eye for design. I specialize in prototyping designs using tools like Figma, where I bring together aesthetics and functionality to create seamless user experiences. Whether it's designing intuitive user interfaces or crafting engaging user interactions, I'm dedicated to ensuring that every aspect of the web application is thoughtfully designed and meticulously implemented. Let's collaborate to build not just functional, but visually stunning web experiences.</p>
+            <p>In addition to my proficiency in web development, I also have a keen eye for design. I specialize in prototyping designs using tools like Figma, where I bring together aesthetics and functionality to create seamless user experiences. Whether it's designing intuitive user interfaces or crafting engaging user interactions, I'm dedicated to ensuring that every aspect of the web application is thoughtfully designed and meticulously implemented.</p>
           </RichText>
         </Grid>
       </ContentContainer>
