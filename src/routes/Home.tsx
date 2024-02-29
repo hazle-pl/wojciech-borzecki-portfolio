@@ -11,6 +11,7 @@ const Home = () => {
     <>
     <Section paddingBottom="3" paddingTop="4">
       <ContentContainer width={1200}>
+      <span className="mesh" id="mesh-1"/>
         <RichText>
           <center>
             <h1>DESIGN.<br/><span className="gradient-txt">DEVELOP.</span><br/>DELIVER.</h1>
@@ -33,6 +34,7 @@ const Home = () => {
           </center>
         </RichText>
       </ContentContainer>
+      <span className="mesh" id="mesh-2"/>
     </Section>
     <Section paddingBottom="3">
       <ContentContainer width={1200}>
@@ -50,6 +52,7 @@ const Home = () => {
         </RichText>
         <Grid paddingBottom="3" gap={3} paddingTop="3" xl={2} md={2} xs={1}>
         <img className="grid-images" src="../img/design-image.webp"/>
+        <span className="mesh" id="mesh-3"/>
           <RichText>
             <p>In addition to my proficiency in web development, I also have a keen eye for design. I specialize in prototyping designs using tools like Figma, where I bring together aesthetics and functionality to create seamless user experiences. Whether it's designing intuitive user interfaces or crafting engaging user interactions, I'm dedicated to ensuring that every aspect of the web application is thoughtfully designed and meticulously implemented.</p>
           </RichText>
@@ -58,6 +61,7 @@ const Home = () => {
     </Section>
     <Section id="projects">
       <ContentContainer>
+      <span className="mesh" id="mesh-5"/>
         <RichText>
           <center>
             <span className="circle">3</span>
@@ -93,6 +97,7 @@ const Home = () => {
       </ContentContainer>
     </Section>
     <Section>
+    <span className="mesh" id="mesh-4"/>
       <ContentContainer>
         <RichText>
           <center>
