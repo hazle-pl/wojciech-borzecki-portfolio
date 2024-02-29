@@ -4,6 +4,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './scss/main.scss';
 
 import Home from './routes/Home.tsx';
+import Header from './components/header.tsx';
 
 const router = createBrowserRouter([
   {path: "/", element: <Home/>},
@@ -11,6 +12,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
+    <Header/>
     <RouterProvider router={router}/>
   </React.StrictMode>,
 )

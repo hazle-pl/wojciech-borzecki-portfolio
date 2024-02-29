@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 interface CardProps {
   backgroundImage?: string;
@@ -10,6 +11,10 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ backgroundImage, backgroundColor, id, children, href }) => {
 
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
+
   const customId = id ? `${id}` : '';
   const bgColor = backgroundColor ? `bg-${backgroundColor}` : '';
   const backgroundImageStyle = backgroundImage ? { backgroundImage: `url('${backgroundImage}')` } : {};
@@ -17,10 +22,10 @@ const Card: React.FC<CardProps> = ({ backgroundImage, backgroundColor, id, child
   return (
     <>
     {href? (
-    <a href={href} target='_blank' id={customId} className={`card ${bgColor}`} style={{ ...backgroundImageStyle }}>
+    <a  ref={ref} href={href} target='_blank' id={customId} className={`card ${bgColor} ${inView ? 'visible' : 'not-visible'}`} style={{ ...backgroundImageStyle }}>
       {children}
     </a>):
-    (<div id={customId} className={`card ${bgColor}`} style={{ ...backgroundImageStyle }}>
+    (<div  ref={ref} id={customId} className={`card ${bgColor} ${inView ? 'visible' : 'not-visible'}`} style={{ ...backgroundImageStyle }}>
       {children}
     </div>)}
     </>
