@@ -23,6 +23,10 @@ html {
     width: 100%;
     margin: auto;
     padding: 0 30px;
+
+    &.w-1200{
+        max-width: 1200px;
+    }
 }
 
 .gap-1{
@@ -370,3 +374,7 @@ html {
     }
 }
   
+
+.grid-images{
+    max-width: 100%;
+}
