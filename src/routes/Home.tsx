@@ -92,6 +92,14 @@ const Home = () => {
                 <h2>Tic Tac Toe</h2>
               </RichText>
             </Card>
+            <Card id="id1" href="https://random-user-api-nine.vercel.app/">
+            <img src="../img/randomuser-bg.jpg"/>
+              <span className="overlay"/>
+              <RichText>
+                <h4>App</h4>
+                <h2>Random User API</h2>
+              </RichText>
+            </Card>
           </Grid>
         </RichText>
       </ContentContainer>
