@@ -96,8 +96,8 @@ const Home = () => {
             <img src="../img/randomuser-bg.jpg"/>
               <span className="overlay"/>
               <RichText>
-                <h4>App</h4>
-                <h2>Random User API</h2>
+                <h4>Application</h4>
+                <h2>Random user API</h2>
               </RichText>
             </Card>
           </Grid>
